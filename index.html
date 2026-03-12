@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - NovaDash Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
+  <link href="assets/css/layout.css" rel="stylesheet">
+  <link href="assets/css/components.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">N</div>
+      <span class="brand-text">NovaDash</span>
+    </div>
+    <div class="sidebar-menu">
+      <div class="menu-section">
+        <div class="menu-section-title">Main</div>
+        <div class="menu-item">
+          <a href="index.html" class="menu-link active">
+            <i class="ri-dashboard-line menu-icon"></i>
+            <span>Dashboard</span>
+          </a>
+        </div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Pages</div>
+        <div class="menu-item">
+          <a href="#" class="menu-link">
+            <i class="ri-user-settings-line menu-icon"></i>
+            <span>Users</span>
+            <i class="ri-arrow-right-s-line menu-arrow"></i>
+          </a>
+          <div class="submenu">
+            <div class="submenu-item">
+              <a href="users.html" class="submenu-link">
+                <i class="ri-user-line"></i>
+                <span>Users</span>
+              </a>
+            </div>
+            <div class="submenu-item">
+              <a href="profile.html" class="submenu-link">
+                <i class="ri-profile-line"></i>
+                <span>Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a href="projects.html" class="menu-link">
+            <i class="ri-folder-3-line menu-icon"></i>
+            <span>Projects</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="calendar.html" class="menu-link">
+            <i class="ri-calendar-line menu-icon"></i>
+            <span>Calendar</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="kanban.html" class="menu-link">
+            <i class="ri-layout-grid-line menu-icon"></i>
+            <span>Kanban</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="chat.html" class="menu-link">
+            <i class="ri-chat-3-line menu-icon"></i>
+            <span>Chat</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="pricing.html" class="menu-link">
+            <i class="ri-price-tag-3-line menu-icon"></i>
+            <span>Pricing</span>
+          </a>
+        </div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Authentication</div>
+        <div class="menu-item">
+          <a href="login.html" class="menu-link">
+            <i class="ri-login-box-line menu-icon"></i>
+            <span>Login</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="register.html" class="menu-link">
+            <i class="ri-user-add-line menu-icon"></i>
+            <span>Register</span>
+          </a>
+        </div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Support</div>
+        <div class="menu-item">
+          <a href="faq.html" class="menu-link">
+            <i class="ri-question-line menu-icon"></i>
+            <span>FAQ</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="documentation.html" class="menu-link">
+            <i class="ri-book-2-line menu-icon"></i>
+            <span>Documentation</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="changelog.html" class="menu-link">
+            <i class="ri-file-list-3-line menu-icon"></i>
+            <span>Changelog</span>
+          </a>
+        </div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Error</div>
+        <div class="menu-item">
+          <a href="404.html" class="menu-link">
+            <i class="ri-error-warning-line menu-icon"></i>
+            <span>404 Error</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="maintenance.html" class="menu-link">
+            <i class="ri-tools-line menu-icon"></i>
+            <span>Maintenance</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-toggle">
+      <i class="ri-arrow-left-s-line"></i>
+    </div>
+  </aside>
+  <div class="sidebar-overlay"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <button class="navbar-toggle">
+        <i class="ri-menu-line"></i>
+      </button>
+      <div class="search-box">
+        <i class="ri-search-line"></i>
+        <input type="text" placeholder="Search...">
+        <div class="search-shortcut">
+          <kbd>Ctrl</kbd>
+          <kbd>K</kbd>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="navbar-item">
+        <button class="language-selector">
+          <span>EN</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+      </div>
+      <div class="navbar-item">
+        <button class="navbar-btn" data-theme-toggle>
+          <i class="ri-sun-line"></i>
+        </button>
+      </div>
+      <div class="navbar-item">
+        <button class="navbar-btn" data-dropdown-toggle="notification-dropdown">
+          <i class="ri-notification-3-line"></i>
+          <span class="badge">3</span>
+        </button>
+        <div class="navbar-dropdown notification-dropdown">
+          <div class="dropdown-header">
+            <h6>Notifications</h6>
+            <p>You have 3 unread messages</p>
+          </div>
+          <div class="notification-list">
+            <div class="notification-item">
+              <div class="notification-icon success">
+                <i class="ri-check-line"></i>
+              </div>
+              <div class="notification-content">
+                <h6>Project completed</h6>
+                <p>Your project has been completed successfully</p>
+                <span class="notification-time">2 minutes ago</span>
+              </div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon info">
+                <i class="ri-user-follow-line"></i>
+              </div>
+              <div class="notification-content">
+                <h6>New user registered</h6>
+                <p>John Doe has joined the platform</p>
+                <span class="notification-time">1 hour ago</span>
+              </div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon warning">
+                <i class="ri-alert-line"></i>
+              </div>
+              <div class="notification-content">
+                <h6>Payment pending</h6>
+                <p>Payment verification is required</p>
+                <span class="notification-time">3 hours ago</span>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-footer">
+            <a href="#">View All Notifications</a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-item">
+        <button class="navbar-btn" data-dropdown-toggle="message-dropdown">
+          <i class="ri-message-3-line"></i>
+          <span class="badge">5</span>
+        </button>
+        <div class="navbar-dropdown message-dropdown">
+          <div class="dropdown-header">
+            <h6>Messages</h6>
+            <p>You have 5 unread messages</p>
+          </div>
+          <div class="notification-list">
+            <div class="notification-item">
+              <div class="notification-icon info">
+                <img src="https://i.pravatar.cc/150?img=1" alt="" class="rounded-circle" style="width:36px;height:36px;">
+              </div>
+              <div class="notification-content">
+                <h6>Sarah Smith</h6>
+                <p>Hey, can we schedule a meeting?</p>
+                <span class="notification-time">10 minutes ago</span>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-footer">
+            <a href="chat.html">View All Messages</a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-item">
+        <button class="navbar-btn" data-settings-toggle>
+          <i class="ri-settings-4-line"></i>
+        </button>
+      </div>
+      <div class="navbar-item">
+        <div class="user-profile" data-dropdown-toggle="user-dropdown">
+          <img src="https://i.pravatar.cc/150?img=68" alt="User" class="avatar">
+          <div class="user-info">
+            <span class="user-name">Alex Johnson</span>
+            <span class="user-role">Administrator</span>
+          </div>
+          <i class="ri-arrow-down-s-line"></i>
+        </div>
+        <div class="navbar-dropdown user-dropdown">
+          <div class="dropdown-header">
+            <h6>Alex Johnson</h6>
+            <p>alex@example.com</p>
+          </div>
+          <div class="dropdown-menu-list">
+            <a href="profile.html" class="dropdown-menu-item">
+              <i class="ri-user-line"></i>
+              <span>My Profile</span>
+            </a>
+            <a href="profile.html" class="dropdown-menu-item">
+              <i class="ri-settings-4-line"></i>
+              <span>Settings</span>
+            </a>
+          </div>
+          <div class="dropdown-footer">
+            <a href="login.html">
+              <i class="ri-logout-box-r-line"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Settings Panel -->
+  <div class="settings-overlay"></div>
+  <div class="settings-panel">
+    <div class="settings-header">
+      <h5 class="settings-title">Settings</h5>
+      <button class="settings-close">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <div class="settings-body">
+      <div class="settings-section">
+        <div class="settings-section-title">Layout</div>
+        <div class="layout-switcher">
+          <button class="layout-option active" data-layout="default">Default</button>
+          <button class="layout-option" data-layout="sidebar-collapsed">Collapsed</button>
+          <button class="layout-option" data-layout="horizontal">Horizontal</button>
+          <button class="layout-option" data-layout="boxed">Boxed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+    <div class="main-content">
+      <div class="container-fluid">
+        
+        <!-- Page Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="mb-1">Welcome back, Alex!</h4>
+            <p class="text-secondary mb-0">Here's what's happening with your business today.</p>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newProjectModal">
+              <i class="ri-add-line"></i>
+              New Project
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row mb-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card mb-4">
+              <div class="stat-icon primary">
+                <i class="ri-money-dollar-circle-line"></i>
+              </div>
+              <div class="stat-content">
+                <div class="stat-label">Total Revenue</div>
+                <div class="stat-value" data-count="85000" data-plus="true">$0+</div>
+                <div class="stat-change positive">
+                  <i class="ri-arrow-up-line"></i>
+                  <span>12.5% from last month</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card mb-4">
+              <div class="stat-icon success">
+                <i class="ri-user-follow-line"></i>
+              </div>
+              <div class="stat-content">
+                <div class="stat-label">New Users</div>
+                <div class="stat-value" data-count="2450" data-plus="true">0+</div>
+                <div class="stat-change positive">
+                  <i class="ri-arrow-up-line"></i>
+                  <span>8.2% from last month</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card mb-4">
+              <div class="stat-icon info">
+                <i class="ri-folder-3-line"></i>
+              </div>
+              <div class="stat-content">
+                <div class="stat-label">Active Projects</div>
+                <div class="stat-value" data-count="48" data-plus="true">0+</div>
+                <div class="stat-change negative">
+                  <i class="ri-arrow-down-line"></i>
+                  <span>3.1% from last month</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card mb-4">
+              <div class="stat-icon warning">
+                <i class="ri-percent-line"></i>
+              </div>
+              <div class="stat-content">
+                <div class="stat-label">Conversion Rate</div>
+                <div class="stat-value" data-count="24" data-plus="true">0%</div>
+                <div class="stat-change positive">
+                  <i class="ri-arrow-up-line"></i>
+                  <span>5.4% from last month</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="card-title">Revenue Overview</h5>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-light">Yearly</button>
+                  <button class="btn btn-sm btn-primary">Monthly</button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div style="height: 300px;">
+                  <canvas id="revenueChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="card-title">Traffic Sources</h5>
+              </div>
+              <div class="card-body">
+                <div style="height: 250px;">
+                  <canvas id="doughnutChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Transactions & Activity -->
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="card-title">Recent Transactions</h5>
+                <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover mb-0" id="transactionsTable">
+                    <thead>
+                      <tr>
+                        <th>Transaction ID</th>
+                        <th>User</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="fw-semibold">#TRX-001</td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm bg-primary-light text-primary rounded-circle">J</div>
+                            John Doe
+                          </div>
+                        </td>
+                        <td class="fw-semibold">$1,250.00</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td>2024-01-15</td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">#TRX-002</td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm bg-warning-light text-warning rounded-circle">S</div>
+                            Sarah Smith
+                          </div>
+                        </td>
+                        <td class="fw-semibold">$850.00</td>
+                        <td><span class="badge badge-warning">Pending</span></td>
+                        <td>2024-01-14</td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">#TRX-003</td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm bg-success-light text-success rounded-circle">M</div>
+                            Mike Johnson
+                          </div>
+                        </td>
+                        <td class="fw-semibold">$2,100.00</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td>2024-01-14</td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">#TRX-004</td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm bg-danger-light text-danger rounded-circle">E</div>
+                            Emily Brown
+                          </div>
+                        </td>
+                        <td class="fw-semibold">$450.00</td>
+                        <td><span class="badge badge-danger">Failed</span></td>
+                        <td>2024-01-13</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="card-title">Activity Feed</h5>
+              </div>
+              <div class="card-body">
+                <div class="activity-feed">
+                  <div class="activity-item">
+                    <img src="https://i.pravatar.cc/150?img=1" alt="" class="activity-avatar">
+                    <div class="activity-content">
+                      <div class="activity-header">
+                        <span class="activity-user">Sarah Smith</span>
+                        <span class="activity-action">commented on</span>
+                        <span class="activity-target">Project Alpha</span>
+                      </div>
+                      <span class="activity-time">2 minutes ago</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <img src="https://i.pravatar.cc/150?img=2" alt="" class="activity-avatar">
+                    <div class="activity-content">
+                      <div class="activity-header">
+                        <span class="activity-user">Mike Johnson</span>
+                        <span class="activity-action">uploaded</span>
+                        <span class="activity-target">design-files.zip</span>
+                      </div>
+                      <span class="activity-time">15 minutes ago</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <img src="https://i.pravatar.cc/150?img=3" alt="" class="activity-avatar">
+                    <div class="activity-content">
+                      <div class="activity-header">
+                        <span class="activity-user">Emily Brown</span>
+                        <span class="activity-action">completed</span>
+                        <span class="activity-target">Task #123</span>
+                      </div>
+                      <span class="activity-time">1 hour ago</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <img src="https://i.pravatar.cc/150?img=4" alt="" class="activity-avatar">
+                    <div class="activity-content">
+                      <div class="activity-header">
+                        <span class="activity-user">David Wilson</span>
+                        <span class="activity-action">created</span>
+                        <span class="activity-target">New Project</span>
+                      </div>
+                      <span class="activity-time">3 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- New Project Modal -->
+  <div class="modal fade" id="newProjectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create New Project</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Project Name</label>
+              <input type="text" class="form-control" placeholder="Enter project name">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Description</label>
+              <textarea class="form-control" rows="3" placeholder="Enter project description"></textarea>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Start Date</label>
+                <input type="date" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">End Date</label>
+                <input type="date" class="form-control">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Team Members</label>
+              <select class="form-select">
+                <option>Select team members</option>
+                <option>John Doe</option>
+                <option>Sarah Smith</option>
+                <option>Mike Johnson</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Priority</label>
+              <select class="form-select">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Create Project</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-to-top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/datatables.net@1.13.7/js/jquery.dataTables.min.js"></script>
+  
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/datatable-init.js"></script>
+</body>
+</html>

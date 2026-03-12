@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - NovaDash Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
+  <link href="assets/css/layout.css" rel="stylesheet">
+  <link href="assets/css/components.css" rel="stylesheet">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand"><div class="brand-logo">N</div><span class="brand-text">NovaDash</span></div>
+    <div class="sidebar-menu">
+      <div class="menu-section"><div class="menu-section-title">Main</div>
+        <div class="menu-item"><a href="index.html" class="menu-link"><i class="ri-dashboard-line menu-icon"></i><span>Dashboard</span></a></div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Pages</div>
+        <div class="menu-item">
+          <a href="#" class="menu-link"><i class="ri-user-settings-line menu-icon"></i><span>Users</span><i class="ri-arrow-right-s-line menu-arrow"></i></a>
+          <div class="submenu">
+            <div class="submenu-item"><a href="users.html" class="submenu-link"><i class="ri-user-line"></i><span>Users</span></a></div>
+            <div class="submenu-item"><a href="profile.html" class="submenu-link"><i class="ri-profile-line"></i><span>Profile</span></a></div>
+          </div>
+        </div>
+        <div class="menu-item"><a href="projects.html" class="menu-link"><i class="ri-folder-3-line menu-icon"></i><span>Projects</span></a></div>
+        <div class="menu-item"><a href="calendar.html" class="menu-link"><i class="ri-calendar-line menu-icon"></i><span>Calendar</span></a></div>
+        <div class="menu-item"><a href="kanban.html" class="menu-link"><i class="ri-layout-grid-line menu-icon"></i><span>Kanban</span></a></div>
+        <div class="menu-item"><a href="chat.html" class="menu-link active"><i class="ri-chat-3-line menu-icon"></i><span>Chat</span></a></div>
+        <div class="menu-item"><a href="pricing.html" class="menu-link"><i class="ri-price-tag-3-line menu-icon"></i><span>Pricing</span></a></div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Authentication</div>
+        <div class="menu-item"><a href="login.html" class="menu-link"><i class="ri-login-box-line menu-icon"></i><span>Login</span></a></div>
+        <div class="menu-item"><a href="register.html" class="menu-link"><i class="ri-user-add-line menu-icon"></i><span>Register</span></a></div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Support</div>
+        <div class="menu-item"><a href="faq.html" class="menu-link"><i class="ri-question-line menu-icon"></i><span>FAQ</span></a></div>
+        <div class="menu-item"><a href="documentation.html" class="menu-link"><i class="ri-book-2-line menu-icon"></i><span>Documentation</span></a></div>
+        <div class="menu-item"><a href="changelog.html" class="menu-link"><i class="ri-file-list-3-line menu-icon"></i><span>Changelog</span></a></div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Error</div>
+        <div class="menu-item"><a href="404.html" class="menu-link"><i class="ri-error-warning-line menu-icon"></i><span>404 Error</span></a></div>
+        <div class="menu-item"><a href="maintenance.html" class="menu-link"><i class="ri-tools-line menu-icon"></i><span>Maintenance</span></a></div>
+      </div>
+    </div>
+    <div class="sidebar-toggle"><i class="ri-arrow-left-s-line"></i></div>
+  </aside>
+  <div class="sidebar-overlay"></div>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <button class="navbar-toggle"><i class="ri-menu-line"></i></button>
+      <div class="search-box"><i class="ri-search-line"></i><input type="text" placeholder="Search..."></div>
+    </div>
+    <div class="navbar-right">
+      <div class="navbar-item"><button class="language-selector"><span>EN</span><i class="ri-arrow-down-s-line"></i></button></div>
+      <div class="navbar-item"><button class="navbar-btn" data-theme-toggle><i class="ri-sun-line"></i></button></div>
+      <div class="navbar-item"><button class="navbar-btn" data-dropdown-toggle="notification-dropdown"><i class="ri-notification-3-line"></i><span class="badge">3</span></button></div>
+      <div class="navbar-item"><div class="user-profile" data-dropdown-toggle="user-dropdown"><img src="https://i.pravatar.cc/150?img=68" alt="User" class="avatar"><div class="user-info"><span class="user-name">Alex Johnson</span><span class="user-role">Administrator</span></div><i class="ri-arrow-down-s-line"></i></div></div>
+    </div>
+  </nav>
+
+  <div class="settings-overlay"></div>
+  <div class="settings-panel">
+    <div class="settings-header"><h5 class="settings-title">Settings</h5><button class="settings-close"><i class="ri-close-line"></i></button></div>
+    <div class="settings-body">
+      <div class="settings-section">
+        <div class="settings-section-title">Layout</div>
+        <div class="layout-switcher">
+          <button class="layout-option active" data-layout="default">Default</button>
+          <button class="layout-option" data-layout="sidebar-collapsed">Collapsed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="main-content p-0">
+      <div class="chat-container">
+        <div class="chat-sidebar">
+          <div class="chat-search p-3">
+            <input type="text" placeholder="Search conversations...">
+          </div>
+          <div class="chat-users">
+            <div class="chat-user active">
+              <div class="chat-user-avatar">
+                <img src="https://i.pravatar.cc/150?img=1" alt="">
+                <span class="online-indicator"></span>
+              </div>
+              <div class="chat-user-info">
+                <div class="chat-user-name">Sarah Smith</div>
+                <div class="chat-user-message">Hey, can we schedule a meeting?</div>
+              </div>
+              <div class="chat-user-time">10m</div>
+            </div>
+            <div class="chat-user">
+              <div class="chat-user-avatar">
+                <img src="https://i.pravatar.cc/150?img=2" alt="">
+                <span class="online-indicator"></span>
+              </div>
+              <div class="chat-user-info">
+                <div class="chat-user-name">Mike Johnson</div>
+                <div class="chat-user-message">The project files are ready!</div>
+              </div>
+              <div class="chat-user-time">1h</div>
+            </div>
+            <div class="chat-user">
+              <div class="chat-user-avatar">
+                <img src="https://i.pravatar.cc/150?img=3" alt="">
+              </div>
+              <div class="chat-user-info">
+                <div class="chat-user-name">Emily Brown</div>
+                <div class="chat-user-message">Thanks for the update!</div>
+              </div>
+              <div class="chat-user-time">2h</div>
+            </div>
+            <div class="chat-user">
+              <div class="chat-user-avatar">
+                <img src="https://i.pravatar.cc/150?img=4" alt="">
+                <span class="online-indicator"></span>
+              </div>
+              <div class="chat-user-info">
+                <div class="chat-user-name">David Wilson</div>
+                <div class="chat-user-message">I'll review it tomorrow</div>
+              </div>
+              <div class="chat-user-time">3h</div>
+            </div>
+            <div class="chat-user">
+              <div class="chat-user-avatar">
+                <img src="https://i.pravatar.cc/150?img=5" alt="">
+              </div>
+              <div class="chat-user-info">
+                <div class="chat-user-name">Lisa Anderson</div>
+                <div class="chat-user-message">Perfect, see you then!</div>
+              </div>
+              <div class="chat-user-time">5h</div>
+            </div>
+            <div class="chat-user">
+              <div class="chat-user-avatar">
+                <img src="https://i.pravatar.cc/150?img=6" alt="">
+              </div>
+              <div class="chat-user-info">
+                <div class="chat-user-name">James Taylor</div>
+                <div class="chat-user-message">Let me check and get back</div>
+              </div>
+              <div class="chat-user-time">Yesterday</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-main">
+          <div class="chat-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://i.pravatar.cc/150?img=1" alt="" class="avatar">
+              <div>
+                <h6 class="mb-0">Sarah Smith</h6>
+                <span class="text-success small">Online</span>
+              </div>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-icon btn-light"><i class="ri-phone-line"></i></button>
+              <button class="btn btn-sm btn-icon btn-light"><i class="ri-vidicon-line"></i></button>
+              <button class="btn btn-sm btn-icon btn-light"><i class="ri-more-fill"></i></button>
+            </div>
+          </div>
+
+          <div class="chat-messages">
+            <div class="chat-message">
+              <img src="https://i.pravatar.cc/150?img=1" alt="" class="avatar" style="width:32px;height:32px;">
+              <div class="chat-message-bubble">
+                <div class="chat-message-text">Hi Alex! How are you doing today?</div>
+                <div class="chat-message-time">10:30 AM</div>
+              </div>
+            </div>
+            <div class="chat-message outgoing">
+              <img src="https://i.pravatar.cc/150?img=68" alt="" class="avatar" style="width:32px;height:32px;">
+              <div class="chat-message-bubble">
+                <div class="chat-message-text">Hey Sarah! I'm doing great, thanks for asking! How about you?</div>
+                <div class="chat-message-time">10:32 AM</div>
+              </div>
+            </div>
+            <div class="chat-message">
+              <img src="https://i.pravatar.cc/150?img=1" alt="" class="avatar" style="width:32px;height:32px;">
+              <div class="chat-message-bubble">
+                <div class="chat-message-text">I'm good too! I wanted to ask about the project timeline. Are we still on track for the deadline?</div>
+                <div class="chat-message-time">10:33 AM</div>
+              </div>
+            </div>
+            <div class="chat-message outgoing">
+              <img src="https://i.pravatar.cc/150?img=68" alt="" class="avatar" style="width:32px;height:32px;">
+              <div class="chat-message-bubble">
+                <div class="chat-message-text">Yes, we're on track! The development is about 75% complete. We should be able to deliver by the end of next week.</div>
+                <div class="chat-message-time">10:35 AM</div>
+              </div>
+            </div>
+            <div class="chat-message">
+              <img src="https://i.pravatar.cc/150?img=1" alt="" class="avatar" style="width:32px;height:32px;">
+              <div class="chat-message-bubble">
+                <div class="chat-message-text">That's great news! Hey, can we schedule a meeting to discuss the final details?</div>
+                <div class="chat-message-time">10:36 AM</div>
+              </div>
+            </div>
+            <div class="chat-message outgoing">
+              <img src="https://i.pravatar.cc/150?img=68" alt="" class="avatar" style="width:32px;height:32px;">
+              <div class="chat-message-bubble">
+                <div class="chat-message-text">Sure! How about tomorrow at 2 PM?</div>
+                <div class="chat-message-time">10:38 AM</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-input">
+            <button class="btn btn-icon btn-light"><i class="ri-attachment-line"></i></button>
+            <input type="text" placeholder="Type a message...">
+            <button class="btn btn-icon btn-light"><i class="ri-emoji-sticker-line"></i></button>
+            <button class="btn btn-primary"><i class="ri-send-plane-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-to-top"><i class="ri-arrow-up-line"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

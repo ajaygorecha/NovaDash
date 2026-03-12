@@ -1,0 +1,183 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <button class="navbar-toggle">
+      <i class="ri-menu-line"></i>
+    </button>
+    
+    <div class="search-box">
+      <i class="ri-search-line"></i>
+      <input type="text" placeholder="Search..." data-translate="common.search">
+      <div class="search-shortcut">
+        <kbd>Ctrl</kbd>
+        <kbd>K</kbd>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-right">
+    <div class="navbar-item">
+      <button class="language-selector" data-dropdown-toggle="language-dropdown">
+        <span class="current-language">EN</span>
+        <i class="ri-arrow-down-s-line"></i>
+      </button>
+      <div class="navbar-dropdown language-dropdown">
+        <div class="dropdown-menu-list">
+          <a href="#" class="dropdown-menu-item language-option" data-lang="en">
+            <span>🇺🇸 English</span>
+          </a>
+          <a href="#" class="dropdown-menu-item language-option" data-lang="hi">
+            <span>🇮🇳 हिंदी</span>
+          </a>
+          <a href="#" class="dropdown-menu-item language-option" data-lang="ar">
+            <span>🇸🇦 العربية</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-item">
+      <button class="navbar-btn" data-theme-toggle>
+        <i class="ri-sun-line"></i>
+      </button>
+    </div>
+
+    <div class="navbar-item">
+      <button class="navbar-btn" data-dropdown-toggle="notification-dropdown">
+        <i class="ri-notification-3-line"></i>
+        <span class="badge">3</span>
+      </button>
+      <div class="navbar-dropdown notification-dropdown">
+        <div class="dropdown-header">
+          <h6>Notifications</h6>
+          <p>You have 3 unread messages</p>
+        </div>
+        <div class="notification-list">
+          <div class="notification-item">
+            <div class="notification-icon success">
+              <i class="ri-check-line"></i>
+            </div>
+            <div class="notification-content">
+              <h6>Project completed</h6>
+              <p>Your project has been completed successfully</p>
+              <span class="notification-time">2 minutes ago</span>
+            </div>
+          </div>
+          <div class="notification-item">
+            <div class="notification-icon info">
+              <i class="ri-user-follow-line"></i>
+            </div>
+            <div class="notification-content">
+              <h6>New user registered</h6>
+              <p>John Doe has joined the platform</p>
+              <span class="notification-time">1 hour ago</span>
+            </div>
+          </div>
+          <div class="notification-item">
+            <div class="notification-icon warning">
+              <i class="ri-alert-line"></i>
+            </div>
+            <div class="notification-content">
+              <h6>Payment pending</h6>
+              <p>Payment verification is required</p>
+              <span class="notification-time">3 hours ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-footer">
+          <a href="#">View All Notifications</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-item">
+      <button class="navbar-btn" data-dropdown-toggle="message-dropdown">
+        <i class="ri-message-3-line"></i>
+        <span class="badge">5</span>
+      </button>
+      <div class="navbar-dropdown message-dropdown">
+        <div class="dropdown-header">
+          <h6>Messages</h6>
+          <p>You have 5 unread messages</p>
+        </div>
+        <div class="notification-list">
+          <div class="notification-item">
+            <div class="notification-icon info">
+              <img src="https://i.pravatar.cc/150?img=1" alt="" class="rounded-circle" style="width:36px;height:36px;">
+            </div>
+            <div class="notification-content">
+              <h6>Sarah Smith</h6>
+              <p>Hey, can we schedule a meeting?</p>
+              <span class="notification-time">10 minutes ago</span>
+            </div>
+          </div>
+          <div class="notification-item">
+            <div class="notification-icon success">
+              <img src="https://i.pravatar.cc/150?img=2" alt="" class="rounded-circle" style="width:36px;height:36px;">
+            </div>
+            <div class="notification-content">
+              <h6>Mike Johnson</h6>
+              <p>The project files are ready!</p>
+              <span class="notification-time">1 hour ago</span>
+            </div>
+          </div>
+          <div class="notification-item">
+            <div class="notification-icon warning">
+              <img src="https://i.pravatar.cc/150?img=3" alt="" class="rounded-circle" style="width:36px;height:36px;">
+            </div>
+            <div class="notification-content">
+              <h6>Emily Brown</h6>
+              <p>Thanks for the update!</p>
+              <span class="notification-time">2 hours ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-footer">
+          <a href="chat.html">View All Messages</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-item">
+      <button class="navbar-btn" data-settings-toggle>
+        <i class="ri-settings-4-line"></i>
+      </button>
+    </div>
+
+    <div class="navbar-item">
+      <div class="user-profile" data-dropdown-toggle="user-dropdown">
+        <img src="https://i.pravatar.cc/150?img=68" alt="User" class="avatar">
+        <div class="user-info">
+          <span class="user-name">Alex Johnson</span>
+          <span class="user-role">Administrator</span>
+        </div>
+        <i class="ri-arrow-down-s-line"></i>
+      </div>
+      <div class="navbar-dropdown user-dropdown">
+        <div class="dropdown-header">
+          <h6>Alex Johnson</h6>
+          <p>alex@example.com</p>
+        </div>
+        <div class="dropdown-menu-list">
+          <a href="profile.html" class="dropdown-menu-item">
+            <i class="ri-user-line"></i>
+            <span>My Profile</span>
+          </a>
+          <a href="profile.html" class="dropdown-menu-item">
+            <i class="ri-settings-4-line"></i>
+            <span>Settings</span>
+          </a>
+          <a href="profile.html" class="dropdown-menu-item">
+            <i class="ri-lock-password-line"></i>
+            <span>Change Password</span>
+          </a>
+        </div>
+        <div class="dropdown-footer">
+          <a href="login.html">
+            <i class="ri-logout-box-r-line"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

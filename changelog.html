@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog - NovaDash Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
+  <link href="assets/css/layout.css" rel="stylesheet">
+  <link href="assets/css/components.css" rel="stylesheet">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand"><div class="brand-logo">N</div><span class="brand-text">NovaDash</span></div>
+    <div class="sidebar-menu">
+      <div class="menu-section"><div class="menu-section-title">Main</div>
+        <div class="menu-item"><a href="index.html" class="menu-link"><i class="ri-dashboard-line menu-icon"></i><span>Dashboard</span></a></div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Pages</div>
+        <div class="menu-item">
+          <a href="#" class="menu-link"><i class="ri-user-settings-line menu-icon"></i><span>Users</span><i class="ri-arrow-right-s-line menu-arrow"></i></a>
+          <div class="submenu">
+            <div class="submenu-item"><a href="users.html" class="submenu-link"><i class="ri-user-line"></i><span>Users</span></a></div>
+            <div class="submenu-item"><a href="profile.html" class="submenu-link"><i class="ri-profile-line"></i><span>Profile</span></a></div>
+          </div>
+        </div>
+        <div class="menu-item"><a href="projects.html" class="menu-link"><i class="ri-folder-3-line menu-icon"></i><span>Projects</span></a></div>
+        <div class="menu-item"><a href="calendar.html" class="menu-link"><i class="ri-calendar-line menu-icon"></i><span>Calendar</span></a></div>
+        <div class="menu-item"><a href="kanban.html" class="menu-link"><i class="ri-layout-grid-line menu-icon"></i><span>Kanban</span></a></div>
+        <div class="menu-item"><a href="chat.html" class="menu-link"><i class="ri-chat-3-line menu-icon"></i><span>Chat</span></a></div>
+        <div class="menu-item"><a href="pricing.html" class="menu-link"><i class="ri-price-tag-3-line menu-icon"></i><span>Pricing</span></a></div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Authentication</div>
+        <div class="menu-item"><a href="login.html" class="menu-link"><i class="ri-login-box-line menu-icon"></i><span>Login</span></a></div>
+        <div class="menu-item"><a href="register.html" class="menu-link"><i class="ri-user-add-line menu-icon"></i><span>Register</span></a></div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Support</div>
+        <div class="menu-item"><a href="faq.html" class="menu-link"><i class="ri-question-line menu-icon"></i><span>FAQ</span></a></div>
+        <div class="menu-item"><a href="documentation.html" class="menu-link"><i class="ri-book-2-line menu-icon"></i><span>Documentation</span></a></div>
+        <div class="menu-item"><a href="changelog.html" class="menu-link active"><i class="ri-file-list-3-line menu-icon"></i><span>Changelog</span></a></div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">Error</div>
+        <div class="menu-item"><a href="404.html" class="menu-link"><i class="ri-error-warning-line menu-icon"></i><span>404 Error</span></a></div>
+        <div class="menu-item"><a href="maintenance.html" class="menu-link"><i class="ri-tools-line menu-icon"></i><span>Maintenance</span></a></div>
+      </div>
+    </div>
+    <div class="sidebar-toggle"><i class="ri-arrow-left-s-line"></i></div>
+  </aside>
+  <div class="sidebar-overlay"></div>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <button class="navbar-toggle"><i class="ri-menu-line"></i></button>
+      <div class="search-box"><i class="ri-search-line"></i><input type="text" placeholder="Search..."></div>
+    </div>
+    <div class="navbar-right">
+      <div class="navbar-item"><button class="language-selector"><span>EN</span><i class="ri-arrow-down-s-line"></i></button></div>
+      <div class="navbar-item"><button class="navbar-btn" data-theme-toggle><i class="ri-sun-line"></i></button></div>
+      <div class="navbar-item"><button class="navbar-btn" data-dropdown-toggle="notification-dropdown"><i class="ri-notification-3-line"></i><span class="badge">3</span></button></div>
+      <div class="navbar-item"><div class="user-profile" data-dropdown-toggle="user-dropdown"><img src="https://i.pravatar.cc/150?img=68" alt="User" class="avatar"><div class="user-info"><span class="user-name">Alex Johnson</span><span class="user-role">Administrator</span></div><i class="ri-arrow-down-s-line"></i></div></div>
+    </div>
+  </nav>
+
+  <div class="settings-overlay"></div>
+  <div class="settings-panel">
+    <div class="settings-header"><h5 class="settings-title">Settings</h5><button class="settings-close"><i class="ri-close-line"></i></button></div>
+    <div class="settings-body">
+      <div class="settings-section">
+        <div class="settings-section-title">Layout</div>
+        <div class="layout-switcher">
+          <button class="layout-option active" data-layout="default">Default</button>
+          <button class="layout-option" data-layout="sidebar-collapsed">Collapsed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div><h4 class="mb-1">Changelog</h4><p class="text-secondary mb-0">Version history and updates</p></div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="card mb-4">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="version-badge">v1.0.0</div>
+                  <div>
+                    <h5 class="mb-0">Initial Release</h5>
+                    <span class="text-secondary small">Released on March 12, 2026</span>
+                  </div>
+                </div>
+                
+                <div class="changelog-section">
+                  <h6 class="changelog-heading"><i class="ri-star-smile-line me-2"></i>Features</h6>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <ul class="changelog-list">
+                        <li>Multi-layout system (Default, Collapsed, Horizontal, Boxed)</li>
+                        <li>Dark/Light mode with system preference detection</li>
+                        <li>Multi-language support (English, Hindi, Arabic RTL)</li>
+                        <li>Dashboard with analytics charts (Chart.js)</li>
+                        <li>Users management with DataTables</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="changelog-list">
+                        <li>Projects grid with progress tracking</li>
+                        <li>FullCalendar integration for events</li>
+                        <li>Kanban board for task management</li>
+                        <li>Chat interface for messaging</li>
+                        <li>Pricing page with 3-tier plans</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="changelog-section">
+                  <h6 class="changelog-heading"><i class="ri-layout-grid-line me-2"></i>Components</h6>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <ul class="changelog-list">
+                        <li>Collapsible sidebar with multi-level menu</li>
+                        <li>Navbar with search, notifications, messages</li>
+                        <li>Command palette (Ctrl+K)</li>
+                        <li>Settings panel</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="changelog-list">
+                        <li>Scroll to top button</li>
+                        <li>Responsive design</li>
+                        <li>Buttons, Cards, Alerts, Badges</li>
+                        <li>Forms, Tables, Modals</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="changelog-section">
+                  <h6 class="changelog-heading"><i class="ri-code-box-line me-2"></i>Technologies</h6>
+                  <div class="d-flex flex-wrap gap-2 mt-3">
+                    <span class="tech-badge"><i class="ri-bootstrap-fill me-1"></i>Bootstrap 5</span>
+                    <span class="tech-badge"><i class="ri-remixicon-fill me-1"></i>Remix Icon</span>
+                    <span class="tech-badge"><i class="ri-animation me-1"></i>GSAP</span>
+                    <span class="tech-badge"><i class="ri-box-3-line me-1"></i>Three.js</span>
+                    <span class="tech-badge"><i class="ri-bar-chart-box-line me-1"></i>Chart.js</span>
+                    <span class="tech-badge"><i class="ri-table-line me-1"></i>DataTables</span>
+                    <span class="tech-badge"><i class="ri-calendar-event-line me-1"></i>FullCalendar</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center py-4">
+              <p class="text-secondary mb-3">Want to stay updated with latest changes?</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+                <i class="ri-notification-3-line me-2"></i>Subscribe to Updates
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="subscribeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title">Subscribe to Updates</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-secondary mb-4">Get notified when we release new features and updates.</p>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="minorUpdates">
+              <label class="form-check-label" for="minorUpdates">Include minor updates</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-to-top"><i class="ri-arrow-up-line"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>
